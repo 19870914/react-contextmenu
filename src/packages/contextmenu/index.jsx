@@ -94,6 +94,7 @@ export function ContextMenu(props) {
   }  
   
   function onItemClick(e, item) {
+    if (item.children && item.children.length) return
     callback && callback(item)
     ContextMenuManager.clearContextMenu()
   }
