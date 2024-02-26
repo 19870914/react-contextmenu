@@ -1,0 +1,97 @@
+$ns: react-contextmenu;
+
+.#{$ns}-enter, 
+.#{$ns}-active {
+	opacity: 0;
+  transform: rotateX(30deg);
+}
+.#{$ns}-enter-active,  
+.#{$ns}-appear-active {
+	opacity: 1;  
+  transform: rotateX(0);
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.#{$ns} {
+  --#{$ns}-color: #333;
+  --#{$ns}-background: #eee;
+  --#{$ns}-border-color: #a0a0a0;
+  --#{$ns}-highlight: #fff;
+  --#{$ns}-splitcolor: #919191;
+  --#{$ns}-shadow-color: rgba(0, 0, 0, 0.3); 
+  --#{$ns}-width: 180px;
+  --#{$ns}-zindex: 19870914;  
+  position: fixed;
+  padding: 5px 3px;
+  width: var(--#{$ns}-width);
+  border: 1px solid var(--#{$ns}-border-color);
+  background: var(--#{$ns}-background);
+  color: var(--#{$ns}-color);
+  box-shadow: 3px 3px 3px 0 var(--#{$ns}-shadow-color);
+  font-size: 14px; 
+  cursor: default;
+  z-index: var(--#{$ns}-zindex);
+  user-select: none;
+}
+.#{$ns},
+.#{$ns} * {
+  box-sizing: border-box;
+}
+
+.#{$ns}-list {
+  position: relative;
+  padding-bottom: 3px;
+  margin-bottom: 3px;
+  &:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+    &::after {
+      display: none;
+    }
+  }
+}
+.#{$ns}-list::after {
+  content: "";
+  position: absolute;
+  inset: auto 10px 0;
+  background: var(--#{$ns}-splitcolor);
+  height: 1px;
+}
+
+.#{$ns}-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 28px;
+  &:hover,
+  &.is--hover {
+    background: var(--#{$ns}-highlight);
+  }
+}
+.#{$ns}-icon,
+.#{$ns}-arrow {
+  width: 16px;
+  height: 16px;  
+  pointer-events: none;
+}
+.#{$ns}-icon {
+  > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.#{$ns}-arrow-icon {
+  width: 16px;
+  height: 16px; 
+  fill: currentColor;
+}
+.#{$ns}-content {
+  flex: 1;
+  width: 0;
+  padding: 0 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

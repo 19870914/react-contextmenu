@@ -1,0 +1,36 @@
+{
+  "name": "@yyyymmddhhmmss/react-contextmenu",
+  "version": "0.1.0",
+  "description": "react-contextmenu",  
+  "type": "module",
+  "main": "dist/react-contextmenu.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
+  "keywords": [
+    "react",
+    "contextmenu"
+  ],
+  "author": "jhc",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.23.4",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "cssnano": "^6.0.5",
+    "rollup": "^4.12.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.71.1",
+    "sass-loader": "^14.1.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-transition-group": "^4.4.5"
+  }
+}
