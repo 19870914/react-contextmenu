@@ -116,7 +116,7 @@ export function ContextMenu(props) {
     <Teleport>
       <CSSTransition
         in={visible} 
-      	classNames={ transition || ns.b() }
+      	classNames={ isSub ? ns.b() : transition || ns.b() }
       	timeout={300}
         unmountOnExit
       >
