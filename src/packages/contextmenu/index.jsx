@@ -151,6 +151,7 @@ export function ContextMenu(props) {
                             subRect={subMenuRect}
                             menus={item.children}
                             callback={callback}
+                            options={options}
                           ></ContextMenu> 
                         : null
                     }
